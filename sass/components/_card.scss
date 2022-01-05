@@ -1,0 +1,157 @@
+.card {
+  position: relative;
+  height: 50rem;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: all 2s ease;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &--front {
+      .picture {
+        height: 23rem;
+        background-size: cover;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+          background-image: linear-gradient(
+              to bottom right,
+              rgba($color-primary-orange-light, 0.8),
+              rgba($color-primary-orange-dark, 0.8)
+            ),
+            url(../../img/hotel.jpg);
+        }
+
+        &--2 {
+          background-image: linear-gradient(
+              to bottom right,
+              rgba($color-primary-green, 0.8),
+              rgba($color-primary-blue, 0.8)
+            ),
+            url(../../img/water-sport.jpg);
+        }
+
+        &--3 {
+          background-image: linear-gradient(
+              to bottom right,
+              rgba($color-primary-blue-light, 0.8),
+              rgba($color-primary-blue-dark, 0.8)
+            ),
+            url(../../img/adventures.jpg);
+        }
+      }
+
+      .heading {
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 1rem;
+        display: inline;
+        text-align: right;
+        box-decoration-break: clone;
+
+        &--1 {
+          background-image: linear-gradient(
+            to right,
+            rgba($color-primary-orange-light, 0.8),
+            rgba($color-primary-orange-dark, 0.8)
+          );
+        }
+
+        &--2 {
+          background-image: linear-gradient(
+            to right,
+            rgba($color-primary-green, 0.8),
+            rgba($color-primary-blue, 0.8)
+          );
+        }
+
+        &--3 {
+          background-image: linear-gradient(
+            to right,
+            rgba($color-primary-blue-light, 0.8),
+            rgba($color-primary-blue-dark, 0.8)
+          );
+        }
+      }
+
+      .details {
+        list-style: none;
+
+        li {
+          font-size: 1.5rem;
+          font-weight: 300;
+          padding: 1rem;
+          color: $color-text-gray;
+          width: 80%;
+          text-align: center;
+          margin: 0 auto;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid $color-light-gray-2;
+          }
+        }
+      }
+    }
+
+    &--back {
+      padding: 10rem 2rem;
+      color: $color-white;
+      text-transform: uppercase;
+
+      .subscription {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .price {
+        font-size: 6rem;
+        font-weight: 200;
+        margin-bottom: 4rem;
+      }
+
+      &-1 {
+        transform: rotateY(180deg);
+        background-image: linear-gradient(
+          to bottom right,
+          $color-primary-orange-light,
+          $color-primary-orange-dark
+        );
+      }
+
+      &-2 {
+        transform: rotateY(180deg);
+        background-image: linear-gradient(
+          to bottom right,
+          $color-primary-green,
+          $color-primary-blue
+        );
+      }
+
+      &-3 {
+        transform: rotateY(180deg);
+        background-image: linear-gradient(
+          to bottom right,
+          $color-primary-blue-light,
+          $color-primary-blue-dark
+        );
+      }
+    }
+  }
+
+  &:hover {
+    transform: rotateY(180deg);
+  }
+}

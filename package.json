@@ -1,0 +1,15 @@
+{
+  "name": "natour-css",
+  "version": "1.0.0",
+  "description": "Natour Css Training",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^7.0.1"
+  }
+}
