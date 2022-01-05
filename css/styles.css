@@ -420,6 +420,94 @@ body {
     padding-left: 2.5rem;
     display: inline-block; }
 
+.navigation {
+  position: relative; }
+  .navigation__check {
+    display: none; }
+  .navigation__label {
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 1500; }
+  .navigation__icon {
+    position: absolute;
+    top: 2.5rem;
+    left: 2rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    display: inline-block;
+    content: "";
+    width: 3rem;
+    height: 3px;
+    background-color: #405e1db3;
+    transition: all 0.3s; }
+  .navigation__icon::before {
+    position: absolute;
+    top: 2rem; }
+  .navigation__background {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-image: radial-gradient(#123805, #fff);
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 500;
+    transition: transform 0.6s; }
+  .navigation__nav {
+    display: block;
+    text-align: center;
+    width: 0;
+    opacity: 0;
+    font-size: 3rem;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0; }
+  .navigation__list {
+    list-style: none;
+    position: absolute;
+    top: 15rem;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s; }
+  .navigation__item {
+    color: #fff;
+    padding: 1rem;
+    background-image: linear-gradient(120deg, transparent 50%, #fff 50%);
+    background-size: 225%;
+    transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1); }
+    .navigation__item:hover {
+      background-position: 100%;
+      color: #405e1db3;
+      transform: translateX(-3px); }
+  .navigation__link {
+    color: inherit;
+    text-decoration: none; }
+  .navigation__check:checked ~ .navigation__background {
+    transform: scale(80); }
+  .navigation__check:checked ~ .navigation__nav .navigation__list {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .navigation__check:checked ~ .navigation__nav {
+    width: 100%;
+    height: 100vh;
+    opacity: 100%; }
+  .navigation__check:checked ~ .navigation__label .navigation__icon {
+    background-color: transparent; }
+  .navigation__check:checked ~ .navigation__label .navigation__icon::before {
+    transform: rotate(45deg);
+    top: 1rem; }
+  .navigation__check:checked ~ .navigation__label .navigation__icon::after {
+    transform: rotate(-45deg);
+    top: 1rem; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right top, rgba(64, 94, 29, 0.7), rgba(99, 185, 211, 0.7)), url(/img/hero.jpg);
