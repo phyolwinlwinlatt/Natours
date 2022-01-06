@@ -19,7 +19,7 @@
 
   &__icon {
     position: absolute;
-    top: 2.5rem;
+    top: 3.5rem;
     left: 2rem;
   }
 
@@ -36,7 +36,14 @@
 
   &__icon::before {
     position: absolute;
-    top: 2rem;
+    top: -1rem;
+    transform-origin: top left;
+  }
+
+  &__icon::after {
+    position: absolute;
+    top: 1rem;
+    transform-origin: bottom left;
   }
 
   &__background {
@@ -118,10 +125,19 @@
 
   &__check:checked ~ &__label &__icon::before {
     transform: rotate(45deg);
-    top: 1rem;
+    left: 0.5rem;
   }
+
   &__check:checked ~ &__label &__icon::after {
     transform: rotate(-45deg);
-    top: 1rem;
+    left: 0.5rem;
+  }
+
+  &__check:not(:checked) ~ &__label:hover &__icon::before {
+    top: -1.2rem;
+  }
+
+  &__check:not(:checked) ~ &__label:hover &__icon::after {
+    top: 1.2rem;
   }
 }
