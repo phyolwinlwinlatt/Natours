@@ -7,20 +7,30 @@
 
   &__label {
     display: inline-block;
-    width: 7rem;
-    height: 7rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     background-color: $color-white;
     position: fixed;
     top: 6rem;
     right: 6rem;
     z-index: 1500;
+
+    @include respond(tablet-portrait) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(tablet-portrait) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__icon {
     position: absolute;
-    top: 3.5rem;
-    left: 2rem;
+    top: 2.5rem;
+    left: 1.5rem;
   }
 
   &__icon,
@@ -28,27 +38,27 @@
   &__icon::after {
     display: inline-block;
     content: "";
-    width: 3rem;
-    height: 3px;
+    width: 2rem;
+    height: 2px;
     background-color: $color-primary-green;
     transition: all 0.3s;
   }
 
   &__icon::before {
     position: absolute;
-    top: -1rem;
+    top: -0.6rem;
     transform-origin: top left;
   }
 
   &__icon::after {
     position: absolute;
-    top: 1rem;
+    top: 0.6rem;
     transform-origin: bottom left;
   }
 
   &__background {
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     background-image: radial-gradient($color-primary-green-dark, $color-white);
     position: fixed;
@@ -56,6 +66,16 @@
     right: 6.5rem;
     z-index: 500;
     transition: transform 0.6s;
+
+    @include respond(tablet-portrait) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(tablet-portrait) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
@@ -134,10 +154,10 @@
   }
 
   &__check:not(:checked) ~ &__label:hover &__icon::before {
-    top: -1.2rem;
+    top: -0.8rem;
   }
 
   &__check:not(:checked) ~ &__label:hover &__icon::after {
-    top: 1.2rem;
+    top: 0.8rem;
   }
 }

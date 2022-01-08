@@ -6,6 +6,26 @@
   box-sizing: inherit;
 }
 
-html{
-  font-size: 62.5%;
+html {
+  font-size: 62.5%; //10px
+
+  @include respond(tablet-landscape) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tablet-portrait) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 70%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    font-size: 60%;
+  }
 }

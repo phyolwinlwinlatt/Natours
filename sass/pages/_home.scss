@@ -1,22 +1,15 @@
 .section-about {
   background-color: $color-light-gray-1;
-  padding: 30rem 0;
+  padding: 15rem 0 25rem 0;
   margin-top: -15vh;
 
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 75%;
-    margin: auto;
-    column-gap: 1rem;
-    .col-1-of-2 {
-      padding: 1rem;
-    }
+  @include respond(tablet-portrait) {
+    padding: 15rem 0 10rem 0;
   }
 }
 
 .section-features {
-  padding: 20rem 0;
+  padding: 15rem 0;
   transform: skewY(-7deg);
   background-image: linear-gradient(
       to bottom right,
@@ -28,36 +21,32 @@
   background-position: top;
   margin-top: -9rem;
 
-  &__grid {
-    display: grid;
-    max-width: 75%;
-    margin: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 1rem;
-  }
-
   & > * {
     transform: skewY(7deg);
+  }
+
+  @include respond(tablet-portrait) {
+    padding: 10rem 0;
   }
 }
 
 .section-tours {
-  padding: 30rem 0 15rem 0;
+  padding: 25rem 0 15rem 0;
   background-color: $color-light-gray-1;
   margin-top: -10rem;
 
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 1rem;
-    max-width: 75%;
-    margin: auto;
+  @include respond(tablet-portrait) {
+    padding: 20rem 0 10rem 0;
   }
 }
 
 .section-stories {
   padding: 10rem 0;
   position: relative;
+
+  @include respond(tablet-portrait) {
+    padding: 5rem 0;
+  }
 }
 
 .section-book {
