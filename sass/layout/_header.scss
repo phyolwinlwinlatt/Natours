@@ -5,11 +5,20 @@
       rgba($color-primary-green, 0.7),
       rgba($color-primary-blue, 0.7)
     ),
-    url(/img/hero.jpg);
+    url(/img/hero-small.jpg);
   background-size: cover;
   background-position: center center;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   position: relative;
+
+  @include retina-display {
+    background-image: linear-gradient(
+        to right top,
+        rgba($color-primary-green, 0.7),
+        rgba($color-primary-blue, 0.7)
+      ),
+      url(/img/hero.jpg);
+  }
 
   &__logo-box {
     position: absolute;

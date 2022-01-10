@@ -274,11 +274,20 @@ body {
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
       .card__content--front .picture--1 {
-        background-image: linear-gradient(to bottom right, rgba(223, 170, 151, 0.8), rgba(255, 69, 0, 0.8)), url(../../img/hotel.jpg); }
+        background-image: linear-gradient(to bottom right, rgba(223, 170, 151, 0.8), rgba(255, 69, 0, 0.8)), url(../../img/hotel-small.jpg); }
+        @media (min-resolution: 192dpi) and (min-width: 56.25em) {
+          .card__content--front .picture--1 {
+            background-image: linear-gradient(to bottom right, rgba(223, 170, 151, 0.8), rgba(255, 69, 0, 0.8)), url(../../img/hotel.jpg); } }
       .card__content--front .picture--2 {
-        background-image: linear-gradient(to bottom right, rgba(64, 94, 29, 0.8), rgba(99, 185, 211, 0.8)), url(../../img/water-sport.jpg); }
+        background-image: linear-gradient(to bottom right, rgba(64, 94, 29, 0.8), rgba(99, 185, 211, 0.8)), url(../../img/water-sport-small.jpg); }
+        @media (min-resolution: 192dpi) and (min-width: 56.25em) {
+          .card__content--front .picture--2 {
+            background-image: linear-gradient(to bottom right, rgba(64, 94, 29, 0.8), rgba(99, 185, 211, 0.8)), url(../../img/water-sport.jpg); } }
       .card__content--front .picture--3 {
-        background-image: linear-gradient(to bottom right, rgba(168, 168, 206, 0.8), rgba(71, 71, 199, 0.8)), url(../../img/adventures.jpg); }
+        background-image: linear-gradient(to bottom right, rgba(168, 168, 206, 0.8), rgba(71, 71, 199, 0.8)), url(../../img/adventures-small.jpg); }
+        @media (min-resolution: 192dpi) and (min-width: 56.25em) {
+          .card__content--front .picture--3 {
+            background-image: linear-gradient(to bottom right, rgba(168, 168, 206, 0.8), rgba(71, 71, 199, 0.8)), url(../../img/adventures.jpg); } }
     .card__content--front .heading {
       font-size: 3rem;
       font-weight: 700;
@@ -438,18 +447,21 @@ body {
   height: 50rem;
   width: 70%;
   margin: auto;
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 0, transparent 40%), url(../../img/beach2.jpg);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 0, transparent 40%), url(../../img/beach2-small.jpg);
   background-size: cover;
   opacity: 0.8;
   padding: 5rem 2.5rem;
   border-radius: 4px; }
+  @media (min-resolution: 192dpi) and (min-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 0, transparent 40%), url(../../img/beach2.jpg); } }
   @media (max-width: 56.25em) {
     .book {
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0.8) 0, transparent 40%), url(../../img/beach2.jpg); } }
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0.8) 0, transparent 40%), url(../../img/beach2-small.jpg); } }
   @media (max-width: 37.5em) {
     .book {
       width: 90%;
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 100%, rgba(255, 255, 255, 0.8) 0), url(../../img/beach2.jpg); } }
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 100%, rgba(255, 255, 255, 0.8) 0), url(../../img/beach2-small.jpg); } }
 
 .form {
   width: 40%; }
@@ -754,11 +766,14 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right top, rgba(64, 94, 29, 0.7), rgba(99, 185, 211, 0.7)), url(/img/hero.jpg);
+  background-image: linear-gradient(to right top, rgba(64, 94, 29, 0.7), rgba(99, 185, 211, 0.7)), url(/img/hero-small.jpg);
   background-size: cover;
   background-position: center center;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   position: relative; }
+  @media (min-resolution: 192dpi) and (min-width: 56.25em) {
+    .header {
+      background-image: linear-gradient(to right top, rgba(64, 94, 29, 0.7), rgba(99, 185, 211, 0.7)), url(/img/hero.jpg); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -871,10 +886,13 @@ body {
 .section-features {
   padding: 15rem 0;
   transform: skewY(-7deg);
-  background-image: linear-gradient(to bottom right, rgba(64, 94, 29, 0.8), rgba(99, 185, 211, 0.8)), url(../../img/water-sport.jpg);
+  background-image: linear-gradient(to bottom right, rgba(64, 94, 29, 0.8), rgba(99, 185, 211, 0.8)), url(../../img/water-sport-small.jpg);
   background-size: cover;
   background-position: top;
   margin-top: -9rem; }
+  @media (min-resolution: 192dpi) and (min-width: 56.25em) {
+    .section-features {
+      background-image: linear-gradient(to bottom right, rgba(64, 94, 29, 0.8), rgba(99, 185, 211, 0.8)), url(../../img/water-sport.jpg); } }
   .section-features > * {
     transform: skewY(7deg); }
   @media (max-width: 56.25em) {

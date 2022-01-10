@@ -16,10 +16,19 @@
       rgba($color-primary-green, 0.8),
       rgba($color-primary-blue, 0.8)
     ),
-    url(../../img/water-sport.jpg);
+    url(../../img/water-sport-small.jpg);
   background-size: cover;
   background-position: top;
   margin-top: -9rem;
+
+  @include retina-display {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-primary-green, 0.8),
+        rgba($color-primary-blue, 0.8)
+      ),
+      url(../../img/water-sport.jpg);
+  }
 
   & > * {
     transform: skewY(7deg);
