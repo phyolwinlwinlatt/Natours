@@ -35,3 +35,9 @@
     }
   }
 }
+
+@mixin retina-display {
+  @media (min-resolution: 192dpi) and (min-width: 56.25em) {
+    @content;
+  }
+}
