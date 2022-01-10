@@ -71,9 +71,12 @@
         </div>
         <div class="col-1-of-2">
           <div class="composition">
-            <img src="./img/sailing.jpg" alt=" photo2" class="composition__photo composition__photo--p1">
-            <img src="./img/water-sport.jpg" alt="photo3" class="composition__photo composition__photo--p2">
-            <img src="./img/hotel.jpg" alt="photo1" class="composition__photo composition__photo--p3">
+            <img src="./img/sailing-small.jpg" srcset="./img/sailing-small.jpg 800w, ./img/sailing.jpg 900w"
+              alt="photo1" class="composition__photo composition__photo--p1">
+            <img src="./img/water-sport-small.jpg" srcset="./img/water-sport-small.jpg 800w, ./img/water-sport.jpg 900w"
+              alt="photo2" class="composition__photo composition__photo--p2">
+            <img src="./img/hotel-small.jpg" srcset="./img/hotel-small.jpg 800w, ./img/hotel.jpg 900w" alt="photo3"
+              class="composition__photo composition__photo--p3">
           </div>
         </div>
       </div>
@@ -203,7 +206,7 @@
     </section>
     <section class="section-stories">
       <div class="bg-video">
-        <video class="bg-video__content" autoplay loop 3>
+        <video class="bg-video__content" autoplay loop 3 muted>
           <source src="img/Matukad Island.mp4" type="video/mp4">
           The browser doesn't play the video
         </video>
@@ -213,7 +216,8 @@
       </div>
       <div class="story">
         <figure class="story__shape">
-          <img src="/img/profile.jpg" alt="People on travelling" class="story__img">
+          <img src="/img/girl-small.jpg" srcset="/img/girl-small.jpg 600w, /img/girl.jpg 900w"
+            alt="People on travelling" class="story__img">
           <figcaption class="story__caption">Marry Smith</figcaption>
         </figure>
         <div class="story__text">
@@ -232,7 +236,8 @@
       </div>
       <div class="story">
         <figure class="story__shape">
-          <img src="/img/brooke-cagle-wKOKidNT14w-unsplash.jpg" alt="People on travelling" class="story__img">
+          <img src="/img/man-small.jpg" srcset="/img/man-small.jpg 600w, /img/man.jpg 900w" alt="People on travelling"
+            class="story__img">
           <figcaption class="story__caption">Jack Wilsom</figcaption>
         </figure>
         <div class="story__text">
@@ -317,8 +322,10 @@
   <div class="popup" id="popup">
     <div class="popup__content">
       <div class="popup__left">
-        <img src="/img/adventures.jpg" alt="Advanture" class="popup__img">
-        <img src="/img/beach1.jpg" alt="Beach 2" class="popup__img">
+        <img src="/img/adventures-small.jpg" srcset="/img/adventures-small.jpg 600w, /img/adventures.jpg 900w"
+          alt="Advanture" class="popup__img">
+        <img src="/img/beach1-small.jpg" srcset="/img/beach1-small.jpg 600w, /img/beach1.jpg 900w" alt="Beach 1"
+          class="popup__img">
       </div>
       <div class="popup__right">
         <a href="#section-tours" class="popup__close">&times;</a>
