@@ -5,11 +5,14 @@
   transform-style: preserve-3d;
   transition: all 2s ease;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  border-radius: 4px;
 
   &__content {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     backface-visibility: hidden;
     border-radius: 4px;
     overflow: hidden;
@@ -110,6 +113,7 @@
       padding: 10rem 2rem;
       color: $color-white;
       text-transform: uppercase;
+      transform: rotateY(180deg);
 
       .subscription {
         font-size: 1rem;
@@ -123,7 +127,6 @@
       }
 
       &-1 {
-        transform: rotateY(180deg);
         background-image: linear-gradient(
           to bottom right,
           $color-primary-orange-light,
@@ -132,7 +135,6 @@
       }
 
       &-2 {
-        transform: rotateY(180deg);
         background-image: linear-gradient(
           to bottom right,
           $color-primary-green,
@@ -141,7 +143,6 @@
       }
 
       &-3 {
-        transform: rotateY(180deg);
         background-image: linear-gradient(
           to bottom right,
           $color-primary-blue-light,
@@ -153,5 +154,72 @@
 
   &:hover {
     transform: rotateY(180deg);
+  }
+
+  @include respond(tablet-portrait) {
+    position: relative;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+
+    &__content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      backface-visibility: visible;
+
+      &--back {
+        padding: 7rem 2rem 2rem 2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+
+        .subscription {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+
+        .price {
+          font-size: 4rem;
+          font-weight: 200;
+          margin-bottom: 2rem;
+        }
+
+        &-1 {
+          transform: rotateY(0);
+          background-image: linear-gradient(
+            to bottom right,
+            $color-primary-orange-light,
+            $color-primary-orange-dark
+          );
+        }
+
+        &-2 {
+          transform: rotateY(0);
+          background-image: linear-gradient(
+            to bottom right,
+            $color-primary-green,
+            $color-primary-blue
+          );
+        }
+
+        &-3 {
+          transform: rotateY(0);
+          background-image: linear-gradient(
+            to bottom right,
+            $color-primary-blue-light,
+            $color-primary-blue-dark
+          );
+        }
+      }
+    }
+
+    &:hover {
+      transform: rotateY(0);
+    }
   }
 }

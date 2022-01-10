@@ -13,6 +13,10 @@
   &__content {
     @include absCenter;
 
+    @include respond(tablet-portrait) {
+      padding-top: 5rem;
+    }
+
     width: 75%;
     background-color: $color-white;
     display: table;
@@ -22,11 +26,25 @@
     visibility: hidden;
     transform: translate(-50%, -50%) scale(0);
     transition: all 0.4s 0.2s;
+
+    @include respond(tablet-portrait) {
+      width: 80%;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+    }
   }
 
   &__left {
     width: 33.33333%;
     display: table-cell;
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
   }
 
   &__right {
@@ -34,11 +52,21 @@
     display: table-cell;
     vertical-align: top;
     padding: 2.5rem;
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+      display: block;
+    }
   }
 
   &__img {
     width: 100%;
     display: block;
+
+    @include respond(tablet-portrait) {
+      width: 49%;
+      display: inline-block;
+    }
   }
 
   &__text {
@@ -61,6 +89,11 @@
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+
+    @include respond(tablet-portrait) {
+      column-count: 1;
+      column-rule: none;
+    }
   }
 
   &__close {
@@ -74,6 +107,10 @@
       top: 2rem;
       right: 2rem;
       line-height: 1;
+
+      @include respond(tablet-portrait) {
+        top: 1rem;
+      }
     }
 
     &:hover {

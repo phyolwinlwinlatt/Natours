@@ -4,7 +4,7 @@
   margin-top: -15vh;
 
   @include respond(tablet-portrait) {
-    padding: 15rem 0 10rem 0;
+    padding: 15rem 0 17rem 0;
   }
 }
 
@@ -56,4 +56,8 @@
     rgba($color-primary-green, 0.8),
     rgba($color-primary-blue, 0.8)
   );
+
+  @include respond(phone) {
+    padding: 5rem 0;
+  }
 }
