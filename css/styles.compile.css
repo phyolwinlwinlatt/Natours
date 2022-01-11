@@ -776,7 +776,7 @@ body {
   position: relative; }
   @media (min-resolution: 192dpi) and (min-width: 56.25em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 56.25em), (min-width: 75em) {
     .header {
-      background-image: linear-gradient(to right top, rgba(64, 94, 29, 0.7), rgba(99, 185, 211, 0.7)), url(/img/hero.jpg); } }
+      background-image: linear-gradient(to right top, rgba(223, 170, 151, 0.7), rgba(255, 69, 0, 0.7)), url(/img/hero.jpg); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
